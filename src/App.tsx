@@ -16,7 +16,7 @@ function App() {
   const randomNumberCollector: any = [];
 
   useEffect(() => {
-    if (cliclCount > 2) {
+    if (cliclCount > 3) {
       setDisable(true);
       setIsGameEnd(true);
       if (message != "You Won ...") {
@@ -127,8 +127,8 @@ function App() {
               onChange={handleOnNameChange}
               placeholder="Enter your name"
               required
-              autoFocus={true}
-            ></input>
+              autoFocus={true}>
+            </input>
             <br></br>
             <input
               value={enteredNumber || ""}
@@ -138,10 +138,10 @@ function App() {
               autoComplete="off"
               placeholder="Enter a number between 1 to 9"
               min="1"
-              max="9"
-            ></input>
+              max="9">
+            </input>
             <br />
-            <button className="bottonStart" type="submit">Start</button>
+            <button className="buttonStart" type="submit">Start</button>
           </form>
         </div>
       ) : (
@@ -153,7 +153,7 @@ function App() {
 
             <h3>Click Count :{cliclCount}</h3>
             <h6>player Name : {playerName}</h6>
-            <h5>Entered Number : {enteredNumber}</h5>
+            <h6>Entered Number : {enteredNumber}</h6>
             <br></br>
             <hr></hr>
             {cards.map((cardItem: any) => {
@@ -175,10 +175,10 @@ function App() {
           ) : (
             <>
               <br></br>
-              <button className="botton" onClick={handleOnRetry}>
+              <button className="button" onClick={handleOnRetry}>
                 Retry
               </button>
-              <button className="botton" onClick={handleExitOnClick}>
+              <button className="button" onClick={handleExitOnClick}>
                 Exit
               </button>
             </>
